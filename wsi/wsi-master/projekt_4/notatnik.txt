@@ -1,0 +1,1 @@
+Kod źródłowy projektu znajduje się w pliky naive_bayes_quality

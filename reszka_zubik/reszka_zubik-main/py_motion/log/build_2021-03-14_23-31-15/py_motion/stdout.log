@@ -1,0 +1,35 @@
+running egg_info
+creating build/py_motion/py_motion.egg-info
+writing build/py_motion/py_motion.egg-info/PKG-INFO
+writing dependency_links to build/py_motion/py_motion.egg-info/dependency_links.txt
+writing entry points to build/py_motion/py_motion.egg-info/entry_points.txt
+writing requirements to build/py_motion/py_motion.egg-info/requires.txt
+writing top-level names to build/py_motion/py_motion.egg-info/top_level.txt
+writing manifest file 'build/py_motion/py_motion.egg-info/SOURCES.txt'
+reading manifest file 'build/py_motion/py_motion.egg-info/SOURCES.txt'
+writing manifest file 'build/py_motion/py_motion.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion
+copying py_motion/__init__.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion
+copying py_motion/py_pub.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion
+running install
+running install_lib
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion
+copying /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion/__init__.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion
+copying /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion/py_pub.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion
+byte-compiling /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion/py_pub.py to py_pub.cpython-38.pyc
+running install_data
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index/resource_index
+creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index/resource_index/packages
+copying resource/py_motion -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index/resource_index/packages
+copying package.xml -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/py_motion
+running install_egg_info
+Copying build/py_motion/py_motion.egg-info to /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion-0.0.0-py3.8.egg-info
+running install_scripts
+Installing py_pub script to /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/py_motion
+writing list of installed files to '/home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/install.log'

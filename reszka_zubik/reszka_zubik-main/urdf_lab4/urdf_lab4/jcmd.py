@@ -1,0 +1,1 @@
+# wezel wywolujacy procedure -> parametry interpolacji

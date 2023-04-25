@@ -1,0 +1,63 @@
+arm1:
+  rpy:
+    p: 0
+    r: 0
+    y: 0
+  size:
+    x: 0.1
+    y: 0.18
+    z: 1.0
+  xyz:
+    x: 0.5
+    y: 0
+    z: 0.05
+arm2:
+  rpy:
+    p: 0
+    r: 0
+    y: 0
+  size:
+    x: 0.1
+    y: 0.15
+    z: 0.6
+  xyz:
+    x: 0.3
+    y: 0
+    z: 0.05
+base:
+  length: 1.2
+  radius: 0.2
+  rpy:
+    p: 0
+    r: 0
+    y: 0
+  xyz:
+    x: 0
+    y: 0
+    z: 0.6
+gripper:
+  rpy:
+    p: 0
+    r: 0
+    y: 0
+  size:
+    x: 0.05
+    y: 0.05
+    z: 0.05
+  xyz:
+    x: 0.025
+    y: 0
+    z: 0.025
+wrist:
+  rpy:
+    p: 3.14
+    r: 0
+    y: 0
+  size:
+    x: 0.05
+    y: 0.1
+    z: 0.3
+  xyz:
+    x: -0.025
+    y: 0
+    z: -0.15

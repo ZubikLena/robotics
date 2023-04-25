@@ -1,0 +1,12 @@
+
+float64 arm1_pos
+float64 arm2_pos
+float64 wrist_pos
+float64 roll
+float64 pitch
+float64 yaw
+float64 time
+float64 sample_time
+string type 
+---
+string output

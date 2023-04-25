@@ -1,0 +1,3 @@
+[console_scripts]
+py_pub = py_motion.py_pub:main
+

@@ -1,0 +1,37 @@
+[0.350s] Invoking command in '/home/lena/dev_ws/src/reszka_zubik/py_motion': PYTHONPATH=/home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/py_motion build --build-base /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build install --prefix /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion --record /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/install.log --single-version-externally-managed
+[0.645s] running egg_info
+[0.646s] creating build/py_motion/py_motion.egg-info
+[0.647s] writing build/py_motion/py_motion.egg-info/PKG-INFO
+[0.647s] writing dependency_links to build/py_motion/py_motion.egg-info/dependency_links.txt
+[0.647s] writing entry points to build/py_motion/py_motion.egg-info/entry_points.txt
+[0.648s] writing requirements to build/py_motion/py_motion.egg-info/requires.txt
+[0.648s] writing top-level names to build/py_motion/py_motion.egg-info/top_level.txt
+[0.649s] writing manifest file 'build/py_motion/py_motion.egg-info/SOURCES.txt'
+[0.701s] reading manifest file 'build/py_motion/py_motion.egg-info/SOURCES.txt'
+[0.703s] writing manifest file 'build/py_motion/py_motion.egg-info/SOURCES.txt'
+[0.703s] running build
+[0.703s] running build_py
+[0.703s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build
+[0.704s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib
+[0.704s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion
+[0.704s] copying py_motion/__init__.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion
+[0.704s] copying py_motion/py_pub.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion
+[0.706s] running install
+[0.707s] running install_lib
+[0.708s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion
+[0.708s] copying /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion/__init__.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion
+[0.709s] copying /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build/lib/py_motion/py_pub.py -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion
+[0.710s] byte-compiling /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion/__init__.py to __init__.cpython-38.pyc
+[0.711s] byte-compiling /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion/py_pub.py to py_pub.cpython-38.pyc
+[0.712s] running install_data
+[0.713s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index
+[0.713s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index/resource_index
+[0.713s] creating /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index/resource_index/packages
+[0.713s] copying resource/py_motion -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/ament_index/resource_index/packages
+[0.714s] copying package.xml -> /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/share/py_motion
+[0.714s] running install_egg_info
+[0.716s] Copying build/py_motion/py_motion.egg-info to /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages/py_motion-0.0.0-py3.8.egg-info
+[0.717s] running install_scripts
+[0.741s] Installing py_pub script to /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/py_motion
+[0.741s] writing list of installed files to '/home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/install.log'
+[0.764s] Invoked command in '/home/lena/dev_ws/src/reszka_zubik/py_motion' returned '0': PYTHONPATH=/home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/py_motion build --build-base /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/build install --prefix /home/lena/dev_ws/src/reszka_zubik/py_motion/install/py_motion --record /home/lena/dev_ws/src/reszka_zubik/py_motion/build/py_motion/install.log --single-version-externally-managed

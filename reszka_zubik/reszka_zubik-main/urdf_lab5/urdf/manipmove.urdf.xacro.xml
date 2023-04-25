@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="manip">
+
+<xacro:property name="filename" value="$(find urdf_lab5)/dh.yaml"/>
+<xacro:property name="params" value="${load_yaml(filename)}"/>
+
+<xacro:property name="base_len" value="${params['base']['length']}" />
+<xacro:property name="base_radius" value="${params['base']['radius']}" />
+<xacro:property name="base_x" value="${params['base']['xyz']['x']}" />
+<xacro:property name="base_y" value="${params['base']['xyz']['y']}" />
+<xacro:property name="base_z" value="${params['base']['xyz']['z']}" />
+<xacro:property name="base_r" value="${params['base']['rpy']['r']}" />
+<xacro:property name="base_p" value="${params['base']['rpy']['p']}" />
+<xacro:property name="base_yaw" value="${params['base']['rpy']['y']}" />
+
+<xacro:property name="arm1_size_x" value="${params['arm1']['size']['x']}" />
+<xacro:property name="arm1_size_y" value="${params['arm1']['size']['y']}" />
+<xacro:property name="arm1_size_z" value="${params['arm1']['size']['z']}" />
+<xacro:property name="arm1_x" value="${params['arm1']['xyz']['x']}" />
+<xacro:property name="arm1_y" value="${params['arm1']['xyz']['y']}" />
+<xacro:property name="arm1_z" value="${params['arm1']['xyz']['z']}" />
+<xacro:property name="arm1_r" value="${params['arm1']['rpy']['r']}" />
+<xacro:property name="arm1_p" value="${params['arm1']['rpy']['p']}" />
+<xacro:property name="arm1_yaw" value="${params['arm1']['rpy']['y']}" />
+
+<xacro:property name="arm2_size_x" value="${params['arm2']['size']['x']}" />
+<xacro:property name="arm2_size_y" value="${params['arm2']['size']['y']}" />
+<xacro:property name="arm2_size_z" value="${params['arm2']['size']['z']}" />
+<xacro:property name="arm2_x" value="${params['arm2']['xyz']['x']}" />
+<xacro:property name="arm2_y" value="${params['arm2']['xyz']['y']}" />
+<xacro:property name="arm2_z" value="${params['arm2']['xyz']['z']}" />
+<xacro:property name="arm2_r" value="${params['arm2']['rpy']['r']}" />
+<xacro:property name="arm2_p" value="${params['arm2']['rpy']['p']}" />
+<xacro:property name="arm2_yaw" value="${params['arm2']['rpy']['y']}" />
+
+<xacro:property name="wrist_size_x" value="${params['wrist']['size']['x']}" />
+<xacro:property name="wrist_size_y" value="${params['wrist']['size']['y']}" />
+<xacro:property name="wrist_size_z" value="${params['wrist']['size']['z']}" />
+<xacro:property name="wrist_x" value="${params['wrist']['xyz']['x']}" />
+<xacro:property name="wrist_y" value="${params['wrist']['xyz']['y']}" />
+<xacro:property name="wrist_z" value="${params['wrist']['xyz']['z']}" />
+<xacro:property name="wrist_r" value="${params['wrist']['rpy']['r']}" />
+<xacro:property name="wrist_p" value="${params['wrist']['rpy']['p']}" />
+<xacro:property name="wrist_yaw" value="${params['wrist']['rpy']['y']}" />
+
+<xacro:property name="gripper_size_x" value="${params['gripper']['size']['x']}" />
+<xacro:property name="gripper_size_y" value="${params['gripper']['size']['y']}" />
+<xacro:property name="gripper_size_z" value="${params['gripper']['size']['z']}" />
+<xacro:property name="gripper_x" value="${params['gripper']['xyz']['x']}" />
+<xacro:property name="gripper_y" value="${params['gripper']['xyz']['y']}" />
+<xacro:property name="gripper_z" value="${params['gripper']['xyz']['z']}" />
+<xacro:property name="gripper_r" value="${params['gripper']['rpy']['r']}" />
+<xacro:property name="gripper_p" value="${params['gripper']['rpy']['p']}" />
+<xacro:property name="gripper_yaw" value="${params['gripper']['rpy']['y']}" />
+
+<material name="white">
+    <color rgba="1 1 1 1"/>
+</material>
+
+<material name="grey">
+    <color rgba=".2 .2 .2 1" />
+</material>
+
+<material name="black">
+    <color rgba="0 0 0 1"/>
+</material>
+
+<link name="base_link"> 
+
+  <visual>
+  <origin rpy="${base_r} ${base_p} ${base_yaw}" xyz="${base_x} ${base_y} ${base_z}" />
+    <geometry>
+      <cylinder radius="${base_radius}" length="${base_len}" />
+    </geometry>
+
+    <material name="grey"/>
+
+  </visual>
+
+</link>
+
+<link name="arm1">
+
+  <visual>
+    <origin rpy="${arm1_r} ${arm1_p+1.5708} ${arm1_yaw}" xyz="${arm1_x} ${arm1_y} ${arm1_z}" />
+    <geometry>
+      <box size="${arm1_size_x} ${arm1_size_y} ${arm1_size_z}" />
+    </geometry>
+    <material name="white"/>
+  </visual>
+
+</link>
+
+<joint name="arm1connect" type="continuous">
+  <axis xyz="0 0 1"/>
+  <origin xyz="0 0 ${2*base_z}" />
+  <parent link="base_link"/>
+  <child link="arm1"/>
+
+</joint>
+
+<link name="arm2">
+
+  <visual>
+    <origin rpy="${arm2_r} ${arm2_p+1.5708} ${arm2_yaw}" xyz="${arm2_x} ${arm2_y} ${arm2_z}" />
+    <geometry>
+      <box size="${arm2_size_x} ${arm2_size_y} ${arm2_size_z}" />
+    </geometry>
+
+    <material name="white"/>
+  </visual>
+
+</link>
+
+<joint name="arm2connect" type="revolute">
+  <axis xyz="0 0 1"/>
+  <limit effort="1000.0" lower="-1.0" upper="6.1" velocity="0.5"/>
+  <origin xyz="${2*arm1_x} 0 0" />
+  <parent link="arm1"/>
+  <child link="arm2"/>
+
+</joint>
+
+<link name="wrist">
+
+  <visual>
+    <origin rpy="${wrist_r} ${wrist_p} ${wrist_yaw}" xyz="${wrist_x} ${wrist_y} ${wrist_z}" />
+    <geometry>
+      <box size="${wrist_size_x} ${wrist_size_y} ${wrist_size_z}" />
+    </geometry>
+    <material name="black"/>
+  </visual>
+
+</link>
+
+<joint name="wristconnect" type="prismatic">
+
+  <axis xyz="0 0 1"/>
+  <limit effort="1000.0" lower="${-wrist_z/2}" upper="${-wrist_z/2}" velocity="0.5"/>
+  <origin rpy="0 ${wrist_p} 0" xyz="${2*arm2_x} 0 0" />
+  <parent link="arm2"/>
+  <child link="wrist"/>
+  
+</joint>
+
+<link name="gripper">
+
+  <visual>
+    <origin rpy="${gripper_r} ${gripper_p} ${gripper_yaw}" xyz="${-gripper_x} ${gripper_y} ${gripper_z}" />
+    <geometry>
+      <box size="${gripper_size_x} ${gripper_size_y} ${gripper_size_z}" />
+    </geometry>
+    <material name="grey"/>
+  </visual>
+
+</link>
+
+<joint name="end"  type="fixed">
+
+  <origin rpy="0 0 0" xyz="0 0 0" />
+  <parent link="wrist"/>
+  <child link="gripper"/>
+
+</joint>
+
+</robot>
+
+
